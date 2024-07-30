@@ -1,7 +1,7 @@
 body {
     font-family: 'Courier New', Courier, monospace;
     background-color: #000;
-    color: #6bbb39;
+    color: #afafaf;
     margin: 0;
     padding: 0;
     display: flex;
@@ -12,10 +12,9 @@ body {
 }
 
 .computer {
-    border: 5px solid #6bbb39;
-    border-radius: 4px;
-    width: 60vw;
-    height: 70vh;
+    border: 3px solid #afafaf;
+    width: 70vw;
+    height: 80vh;
     display: flex;
     flex-direction: column;
     background-color: #111;
@@ -24,7 +23,6 @@ body {
 .screen {
     flex: 1;
     padding: 20px;
-    /*box-shadow: inset 0 0 7px #6bbb39;*/
     overflow-y: auto;
 }
 
@@ -47,7 +45,7 @@ input {
     font-family: monospace;
     border: none;
     background: transparent;
-    color: #6bbb39;
+    color: #afafaf;
     width: 100%;
     font-size: 1em;
     outline: none;
@@ -55,7 +53,7 @@ input {
 
 .keyboard {
     background-color: #000;
-    border-top: 5px solid #6bbb39;
+    border-top: 5px solid #afafaf;
     padding: 10px;
     display: flex;
     flex-direction: column;
@@ -68,8 +66,8 @@ input {
 
 .key {
     background-color: #222;
-    border: 1px solid #6bbb39;
-    color: #6bbb39;
+    border: 1px solid #afafaf;
+    color: #afafaf;
     padding: 5px;
     margin: 2px;
     border-radius: 5px;
