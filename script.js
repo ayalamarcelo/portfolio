@@ -2,26 +2,33 @@ document.addEventListener('DOMContentLoaded', () => {
     const output = document.getElementById('output');
     const commandInput = document.getElementById('commandInput');
 
-    const asciiArt = `
-    ___                                                                  _
-   /__/|__                                                            __//|
-   |__|/_/|__                                                       _/_|_||
-   |_|___|/_/|__                                                 __/_|___||
-   |___|____|/_/|__                                           __/_|____|_||
-   |_|___|_____|/_/|_________________________________________/_|_____|___||
-   |___|___|__|___|/__/___/___/___/___/___/___/___/___/___/_|_____|____|_||
-   |_|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___||
-   |___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|_||
-   |_|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|___|/
-          
-   Welcome to my terminal portfolio. Version 1.0.0.
-   Type 'help' to see the available commands.
-    `;
-    
-   
+    const asciiArt = ` 
+                        Initializing Shell v.0.1
+      Copyright (c) 2024 Marcelo Ayala <marcelorubenayala@outlook.com>
+    ....................................................................
+  
+ @@@  @@@  @@@  @@@@@@@@  @@@        @@@@@@@   @@@@@@   @@@@@@@@@@   @@@@@@@@ 
+ @@@  @@@  @@@  @@@@@@@@  @@@       @@@@@@@@  @@@@@@@@  @@@@@@@@@@@  @@@@@@@@ 
+ @@!  @@!  @@!  @@!       @@!       !@@       @@!  @@@  @@! @@! @@!  @@!      
+ !@!  !@!  !@!  !@!       !@!       !@!       !@!  @!@  !@! !@! !@!  !@!      
+ @!!  !!@  @!@  @!!!:!    @!!       !@!       @!@  !@!  @!! !!@ @!@  @!!!:!   
+ !@!  !!!  !@!  !!!!!:    !!!       !!!       !@!  !!!  !@!   ! !@!  !!!!!:   
+ !!:  !!:  !!:  !!:       !!:       :!!       !!:  !!!  !!:     !!:  !!:      
+ :!:  :!:  :!:  :!:        :!:      :!:       :!:  !:!  :!:     :!:  :!:      
+  :::: :: :::    :: ::::   :: ::::   ::: :::  ::::: ::  :::     ::    :: :::: 
+   :: :  : :    : :: ::   : :: : :   :: :: :   : :  :    :      :    : :: ::  
+
+     -------------------------------------------------------------------
+               Type 'help' for a list of available commands.
+     -------------------------------------------------------------------
+   `;
+
+    console.log(asciiArt);
+
+
     const commands = {
         help: () => {
-            return `Available commands:
+            return ` Available commands:
 
             /info - Display information about me
             /projects - List all my projects
@@ -33,13 +40,15 @@ document.addEventListener('DOMContentLoaded', () => {
         },
 
         info: () => {
-            return `About me:
+            return ` About me:
+
             Full Stack Developer oriented on back-end development, with experience in projects using Node.js 
             and Java, as well as working with both relational and non-relational databases.`;
         },
 
         projects: () => {
-            return `Projects:
+            return ` Projects:
+
             1. Pokematch API - This project allows you to experience the fun of memory games while diving 
             into the exciting world of Pokémon. Test your matching skills as you try to find pairs of your 
             favorite Pokémon.
@@ -51,7 +60,8 @@ document.addEventListener('DOMContentLoaded', () => {
         },
 
         education: () => {
-            return `Education: 
+            return ` Education:
+
             I am currently studying at IFTS N°11, where I am pursuing a program that covers various aspects 
             of software development and programming. My coursework includes subjects related to databases, 
             backend development, and modern web technologies. I am particularly focused on expanding my 
@@ -67,13 +77,14 @@ document.addEventListener('DOMContentLoaded', () => {
             output.innerHTML = '';
             return '';
         },
-        
+
         reset: () => {
             window.location.reload();
         },
 
         github: () => {
-            return `Github: 
+            return ` Github:
+
             https://github.com/ayalamarcelo`;
         },
 
