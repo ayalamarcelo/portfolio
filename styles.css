@@ -8,28 +8,23 @@ body {
     align-items: center;
     height: 100vh;
     overflow-y: hidden;
-    background: linear-gradient(to bottom,
-            #062713 50%,
-            #23d16a 40px);
+    background: linear-gradient(to bottom, #062713 50%, #23d16a 40px);
     background-size: 100% 4px;
 }
 
 .computer {
-    width: 50vw;
+    width: 55vw;
     height: 90vh;
     display: flex;
     flex-direction: column;
     background-color: #111;
-    border-radius: 50px;
 }
 
 .screen {
     flex: 1;
     padding: 70px;
     overflow-y: auto;
-    background: linear-gradient(to bottom,
-            #062713 50%,
-            #23d16a 40px);
+    background: linear-gradient(to bottom, #062713 50%, #23d16a 40px);
     background-size: 100% 4px;
     overflow: hidden;
 }
@@ -45,7 +40,7 @@ body {
 }
 
 .prompt {
-    font-size: 0.9em;
+    font-size: 1.1em;
     margin-right: 5px;
 }
 
@@ -57,4 +52,11 @@ input {
     width: 100%;
     font-size: 1em;
     outline: none;
+}
+
+.ascii-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
 }
