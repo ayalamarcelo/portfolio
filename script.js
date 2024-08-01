@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const commandInput = document.getElementById('commandInput');
 
     const asciiArt = ` 
-                        Initializing Shell v.0.1
+                         Initializing Shell v.0.1
       Copyright (c) 2024 Marcelo Ayala <marcelorubenayala@outlook.com>
     ....................................................................
   
@@ -17,10 +17,10 @@ document.addEventListener('DOMContentLoaded', () => {
  :!:  :!:  :!:  :!:        :!:      :!:       :!:  !:!  :!:     :!:  :!:      
   :::: :: :::    :: ::::   :: ::::   ::: :::  ::::: ::  :::     ::    :: :::: 
    :: :  : :    : :: ::   : :: : :   :: :: :   : :  :    :      :    : :: ::  
-
-     -------------------------------------------------------------------
-               Type 'help' for a list of available commands.
-     -------------------------------------------------------------------
+   
+    -------------------------------------------------------------------
+              Type 'help' for a list of available commands.
+    -------------------------------------------------------------------
    `;
 
     console.log(asciiArt);
@@ -30,26 +30,24 @@ document.addEventListener('DOMContentLoaded', () => {
         help: () => {
             return ` Available commands:
 
-            /info - Display information about me
+            /aboutme - Display information about me
             /projects - List all my projects
             /education - About my studies
             /clear - Clear the terminal
             /reset - Reset the terminal
-            /github - Visit my account
+            /hub - Visit my account
             `;
         },
 
-        info: () => {
-            return ` About me:
-
+        aboutme: () => {
+            return `
             Full Stack Developer oriented on back-end development, with experience in projects 
             using Node.js and Java, as well as working with both relational and non-relational 
             databases.`;
         },
 
         projects: () => {
-            return ` Projects:
-
+            return `
             1. Pokematch API - This project allows you to experience the fun of memory games 
             while diving into the exciting world of Pokémon. Test your matching skills as you 
             try to find pairs of your favorite Pokémon.
@@ -61,8 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
 
         education: () => {
-            return ` Education:
-
+            return `
             I am currently studying at IFTS N°11, where I am pursuing a program that covers 
             various aspects of software development and programming. My coursework includes 
             subjects related to databases, backend development, and modern web technologies. 
@@ -84,9 +81,8 @@ document.addEventListener('DOMContentLoaded', () => {
             window.location.reload();
         },
 
-        github: () => {
-            return ` Github:
-
+        hub: () => {
+            return `
             https://github.com/ayalamarcelo`;
         },
 
@@ -137,6 +133,11 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    printOutput(commands.ascii());
-    printOutput(commands.help());
+    const asciiContainer = document.createElement('div');
+    asciiContainer.classList.add('ascii-container');
+    const asciiPre = document.createElement('pre');
+    asciiPre.textContent = commands.ascii();
+    asciiContainer.appendChild(asciiPre);
+    output.appendChild(asciiContainer);
+    const logger = new logger();
 });

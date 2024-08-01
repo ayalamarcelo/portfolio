@@ -53,3 +53,10 @@ input {
     font-size: 1em;
     outline: none;
 }
+
+.ascii-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
